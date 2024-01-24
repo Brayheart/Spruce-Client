@@ -1,0 +1,179 @@
+#root {
+  background-color: #D8D8D8;
+  height: 100%;
+}
+
+#sortBySelect {
+  width: 170px;
+  border-radius: 8px;
+}
+
+#myInput {
+  width: 137px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#myInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+td {
+    border-bottom: 1px solid #D8D8D8;
+    background-color: #F5F5F5;
+}
+
+th, td, .bookings {
+  color: #5B5B5B;
+  padding: 10px;
+}
+
+h2 {
+  color: #5B5B5B;
+}
+
+select {
+  width: 205px;
+  height: 25px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.table-header:hover {
+  color: blue;
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.searchByLabel {
+  margin-left: 20px;
+  margin-right: 15px;
+}
+
+.sortBy {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.sortBy label {
+  margin-right: 10px;
+}
+
+.App {
+  height: 100vh;
+}
+
+.half2 {
+  margin-left: 30px;
+}
+
+.title {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.table-container {
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+.input-full {
+  width: 200px;
+  height: 20px;
+}
+
+.input-half {
+  width: 70px;
+}
+
+.half {
+  width: 100px;
+}
+
+.nav {
+  background-color: white;
+  padding: 25px;
+}
+
+.bookings {
+  float:left;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.create-bookings {
+  cursor: pointer;
+  float: right;
+  border: none;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #F29648;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.svg {
+  width: 100px;
+}
+
+.pagination {
+  margin-left: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: .25rem;
+}
+
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+.header-container {
+  height: 10%;
+}
+
+.table-header {
+  text-align: left;
+}
+
+.table{
+  width: 100%;
+  padding: 10px;
+}
+
+td {
+   border-spacing:none;
+   background-color: white;
+}
