@@ -42,8 +42,11 @@ class App extends React.Component {
   }
 
   getCustomers = () => {
-    Axios.get("https://spruce-backend.herokuapp.com").then((response) => {
+    Axios.get("http://localhost:3000/").then((response) => {
       this.setState({ customers: response.data, filteredUsers: response.data})
+    }).catch((error) => {
+      // Handle the error here. For example, set an error state and display a message.
+      console.error("An error occurred while fetching the customers:", error);
     });
   }
 
@@ -72,7 +75,8 @@ class App extends React.Component {
   }
 
   dateConvert = () => {
-    this.state.customers.map(el => {
+    if (Array.isArray(this.state.customers)) {
+      this.state.customers.map(el => {
       var date = new Date(el.date + ' ');
       var options = {
         day: "numeric",
@@ -81,7 +85,12 @@ class App extends React.Component {
       }
       var sDay = date.toLocaleDateString("en-US", options);
       el.date = sDay
-    })
+    
+      })
+    } else {
+      // If customers is not an array, log the error or handle it appropriately
+      console.error('this.state.customers is not an array', this.state.customers);
+    }
   }
 
   sortByType = (type) => {
