@@ -5,6 +5,7 @@ import Axios from "axios";
 import { ReactComponent as Svg } from './logo.svg';
 import Posts from './Component/Posts.tsx'
 import Pagination from './Component/Pagination.tsx';
+import customers from './customers.json';
 
 class App extends React.Component {
 
@@ -12,8 +13,8 @@ class App extends React.Component {
     show: false,
     currentPage: 1,
     postsPerPage: 10,
-    customers: [],
-    filteredUsers: [],
+    customers: customers,
+    filteredUsers: customers,
     q: '',
     type: 'Dog Walker'
   };
@@ -41,18 +42,18 @@ class App extends React.Component {
     this.setState({ filteredUsers: users });
   }
 
-  getCustomers = () => {
-    Axios.get("http://localhost:3000/").then((response) => {
-      this.setState({ customers: response.data, filteredUsers: response.data})
-    }).catch((error) => {
-      // Handle the error here. For example, set an error state and display a message.
-      console.error("An error occurred while fetching the customers:", error);
-    });
-  }
+  // getCustomers = () => {
+  //   Axios.get("http://localhost:3000/").then((response) => {
+  //     this.setState({ customers: response.data, filteredUsers: response.data})
+  //   }).catch((error) => {
+  //     // Handle the error here. For example, set an error state and display a message.
+  //     console.error("An error occurred while fetching the customers:", error);
+  //   });
+  // }
 
-  componentDidMount = () => {
-    this.getCustomers()
-  }
+  // componentDidMount = () => {
+  //   this.getCustomers()
+  // }
 
   sortDate = () => {
     var sortedDate = this.state.customers.sort((a, b) => (new Date(a.date)) - (new Date(b.date)))
@@ -112,7 +113,7 @@ class App extends React.Component {
     const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
     const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
     let currentPosts = this.state.filteredUsers.slice(indexOfFirstPost, indexOfLastPost);
-
+console.log(customers, currentPosts)
     const paginate = pageNumber => this.setState({currentPage: pageNumber});
 
     return (
