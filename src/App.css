@@ -85,6 +85,7 @@ a {
 }
 
 .table-container {
+  margin-top: 6vh;
   margin-left: 20px;
   margin-right: 50px;
 }
@@ -178,6 +179,7 @@ td {
 }
 
 .search-container{
+  position: absolute;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -201,6 +203,7 @@ td {
 
   .table-container {
     margin: 0px;
+    margin-top: 2vh;
     padding: 15px;
   }
   
