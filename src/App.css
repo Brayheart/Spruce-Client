@@ -10,7 +10,6 @@
 
 #myInput {
   width: 137px;
-  margin-bottom: 10px;
   border-radius: 8px;
   border: 1px solid gray;
   padding-left: 5px;
@@ -130,11 +129,11 @@ a {
 }
 
 .pagination {
-  margin-left: 40px;
   display: -ms-flexbox;
   display: flex;
   padding-left: 0;
   list-style: none;
+  justify-content: center;
   border-radius: .25rem;
 }
 
@@ -176,4 +175,45 @@ a {
 td {
    border-spacing:none;
    background-color: white;
+}
+
+.search-container{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  table {
+    font-size: 2vw;
+    margin: 0px;
+  }
+
+  td {
+    padding: 1px;
+  }
+
+  .table-container {
+    margin: 0px;
+    padding: 15px;
+  }
+  
+  .input-full {
+    height: 3vh;
+  }
+
+  .content {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .modal {
+    width: auto;
+  }
 }

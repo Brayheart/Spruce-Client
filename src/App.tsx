@@ -113,7 +113,7 @@ class App extends React.Component {
     const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
     const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
     let currentPosts = this.state.filteredUsers.slice(indexOfFirstPost, indexOfLastPost);
-console.log(customers, currentPosts)
+
     const paginate = pageNumber => this.setState({currentPage: pageNumber});
 
     return (
@@ -134,8 +134,10 @@ console.log(customers, currentPosts)
             </button>
           </div>
 
-          <label className='searchByLabel'>Search By:</label>
-          <input type="text" id="myInput" onChange={this.Search} placeholder="Search for names.." title="Type in a name"></input>
+          <div className="search-container">
+            <label className='searchByLabel'>Search By:</label>
+            <input type="text" id="myInput" onChange={this.Search} placeholder="Search for names.." title="Type in a name"></input>
+          </div>
 
         <Posts
           posts={currentPosts}
