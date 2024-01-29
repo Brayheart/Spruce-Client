@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/spruce-booking/static/css/main.3e66f427.css",
-    "main.js": "/spruce-booking/static/js/main.f4e3f970.js",
-    "static/js/787.28cb0dcd.chunk.js": "/spruce-booking/static/js/787.28cb0dcd.chunk.js",
-    "static/media/logo.svg": "/spruce-booking/static/media/logo.49698328b047eb09160f28454a977994.svg",
-    "index.html": "/spruce-booking/index.html",
-    "main.3e66f427.css.map": "/spruce-booking/static/css/main.3e66f427.css.map",
-    "main.f4e3f970.js.map": "/spruce-booking/static/js/main.f4e3f970.js.map",
-    "787.28cb0dcd.chunk.js.map": "/spruce-booking/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "./static/css/main.3e66f427.css",
+    "main.js": "./static/js/main.84b0f11e.js",
+    "static/js/787.28cb0dcd.chunk.js": "./static/js/787.28cb0dcd.chunk.js",
+    "static/media/logo.svg": "./static/media/logo.49698328b047eb09160f28454a977994.svg",
+    "index.html": "./index.html",
+    "main.3e66f427.css.map": "./static/css/main.3e66f427.css.map",
+    "main.84b0f11e.js.map": "./static/js/main.84b0f11e.js.map",
+    "787.28cb0dcd.chunk.js.map": "./static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3e66f427.css",
-    "static/js/main.f4e3f970.js"
+    "static/js/main.84b0f11e.js"
   ]
 }
