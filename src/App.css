@@ -189,6 +189,12 @@ td {
   width: fit-content;
 }
 
+.inputConatiner {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */

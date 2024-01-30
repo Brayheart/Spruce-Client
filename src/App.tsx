@@ -16,8 +16,21 @@ class App extends React.Component {
     customers: customers,
     filteredUsers: customers,
     q: '',
-    type: 'Dog Walker'
+    type: 'Dog Walker',
+    errors: {}
   };
+
+  componentDidMount() {
+    // Load customers from local storage if available
+    const storedCustomers = localStorage.getItem('customers');
+
+   if(storedCustomers) {
+     this.setState({
+       customers: customers.concat(JSON.parse(storedCustomers)),
+       filteredUsers: customers.concat(JSON.parse(storedCustomers))
+     });
+   }
+  }
 
   showModal = e => {
     this.setState({
@@ -104,6 +117,11 @@ class App extends React.Component {
     }
   }
 
+  updateCustomers = (updatedCustomers) => {
+    console.log('here', updatedCustomers, this.state.customers)
+    this.setState({ customers: this.state.customers.concat(updatedCustomers)});
+    this.setState({ filteredUsers: this.state.filteredUsers.concat(updatedCustomers)});
+  };
 
   render() {
 
@@ -153,6 +171,8 @@ class App extends React.Component {
           paginate={paginate}
         />
         <Modal
+          customers={this.state.customers}
+          updateCustomers={this.updateCustomers}
           getCustomers={this.getCustomers}
           onClose={this.showModal}
           show={this.state.show}>
