@@ -164,6 +164,7 @@ export default class Modal extends React.Component {
               <div className='half' >
                 <div className='title'>State</div>
                 <select onChange={(event) => this.setState({state: event.target.value})}  className='input-half' id="fname" name="fname">
+<option value=""></option>
 <option value="AL">AL</option>
 <option value="AK">AK</option>
 <option value="AZ">AZ</option>
