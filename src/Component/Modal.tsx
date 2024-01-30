@@ -160,7 +160,7 @@ export default class Modal extends React.Component {
             <input onChange={(event) => this.setState({address: event.target.value})} className='input-full' type="text" id="fname" name="fname"></input>
             <div className='title'>City</div>
             <input onChange={(event) => this.setState({city: event.target.value})}  className='input-full' type="text" id="fname" name="fname"></input>
-            <div style={{display: 'flex'}}>
+            <div className="inputConatiner">
               <div className='half' >
                 <div className='title'>State</div>
                 <select onChange={(event) => this.setState({state: event.target.value})}  className='input-half' id="fname" name="fname">
@@ -218,7 +218,7 @@ export default class Modal extends React.Component {
               </div>
               <div className='half half2'>
                 <div className='title'>Zip Code</div>
-                <input onChange={(event) => this.setState({zip: event.target.value})}  className='input-half' type="number" id="fname" name="fname"></input>
+                <input onChange={(event) => this.setState({zip: event.target.value})} style={{height: '19px'}}  className='input-half' type="number" id="fname" name="fname"></input>
               </div>
             </div>
           </div>
